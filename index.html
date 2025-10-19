@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="description" content="DinoSave - Il tuo compagno finanziario personale. Traccia spese, risparmia denaro e raggiungi i tuoi obiettivi con l'aiuto di T-Rex AI!">
     <meta name="keywords" content="gestione spese, risparmio, finanza personale, budget, app android">
+    <meta name="author" content="DinoSave">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dinosave.it/">
+    <meta property="og:title" content="DinoSave - Il Tuo Compagno Finanziario">
+    <meta property="og:description" content="Traccia spese, risparmia denaro e raggiungi i tuoi obiettivi finanziari con l'aiuto dell'intelligenza artificiale!">
+    <meta property="og:image" content="https://dinosave.it/dinosave-og.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dinosave.it/">
+    <meta property="twitter:title" content="DinoSave - Il Tuo Compagno Finanziario">
+    <meta property="twitter:description" content="Traccia spese, risparmia denaro e raggiungi i tuoi obiettivi finanziari con l'aiuto dell'intelligenza artificiale!">
+    <meta property="twitter:image" content="https://dinosave.it/dinosave-og.png">
+    
+    <link rel="canonical" href="https://dinosave.it/">
     <title>DinoSave - Il Tuo Compagno Finanziario 🦖</title>
     
     <!-- Tailwind CSS -->
@@ -338,6 +357,11 @@
     </footer>
 
     <script>
+        // Force HTTPS redirect
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+        
         // Initialize AOS
         AOS.init({
             duration: 1000,
